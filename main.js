@@ -175,6 +175,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_main_personal_personal_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/main/personal/personal.component */ "./src/app/components/main/personal/personal.component.ts");
 /* harmony import */ var _components_task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/task/user-task/user-task.component */ "./src/app/components/task/user-task/user-task.component.ts");
 /* harmony import */ var _components_task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/task/task-form/task-form.component */ "./src/app/components/task/task-form/task-form.component.ts");
+/* harmony import */ var _components_user_project_user_project_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/user-project/user-project.component */ "./src/app/components/user-project/user-project.component.ts");
+
 
 
 
@@ -231,7 +233,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector
         _components_main_personal_personal_component__WEBPACK_IMPORTED_MODULE_20__["PersonalComponent"],
         _components_task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_21__["UserTaskComponent"],
         _components_task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_22__["TaskFormComponent"],
-        _services_enum_to_arr_pipe__WEBPACK_IMPORTED_MODULE_0__["EnumToArrayPipe"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+        _services_enum_to_arr_pipe__WEBPACK_IMPORTED_MODULE_0__["EnumToArrayPipe"],
+        _components_user_project_user_project_component__WEBPACK_IMPORTED_MODULE_23__["UserProjectComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
@@ -255,6 +258,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector
                     _components_task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_21__["UserTaskComponent"],
                     _components_task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_22__["TaskFormComponent"],
                     _services_enum_to_arr_pipe__WEBPACK_IMPORTED_MODULE_0__["EnumToArrayPipe"],
+                    _components_user_project_user_project_component__WEBPACK_IMPORTED_MODULE_23__["UserProjectComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -398,6 +402,23 @@ class BoardTaskModel {
         // Приоритет задания.
         this.Priority = 'Trivial';
     }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/classes/project.model.ts":
+/*!******************************************!*\
+  !*** ./src/app/classes/project.model.ts ***!
+  \******************************************/
+/*! exports provided: ProjectModel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectModel", function() { return ProjectModel; });
+// Модель проект
+class ProjectModel {
 }
 
 
@@ -766,13 +787,20 @@ MainMenuComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonalComponent", function() { return PersonalComponent; });
-/* harmony import */ var _classes_task_model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../classes/task.model */ "./src/app/classes/task.model.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _services_task_manager_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../services/task-manager.service */ "./src/app/services/task-manager.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _task_task_task_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../task/task/task.component */ "./src/app/components/task/task/task.component.ts");
-/* harmony import */ var _task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../task/task-form/task-form.component */ "./src/app/components/task/task-form/task-form.component.ts");
-/* harmony import */ var _task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../task/user-task/user-task.component */ "./src/app/components/task/user-task/user-task.component.ts");
+/* harmony import */ var _classes_project_model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../classes/project.model */ "./src/app/classes/project.model.ts");
+/* harmony import */ var _classes_task_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../classes/task.model */ "./src/app/classes/task.model.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _services_task_manager_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../services/task-manager.service */ "./src/app/services/task-manager.service.ts");
+/* harmony import */ var _services_project_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../services/project.service */ "./src/app/services/project.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _task_task_task_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../task/task/task.component */ "./src/app/components/task/task/task.component.ts");
+/* harmony import */ var _task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../task/task-form/task-form.component */ "./src/app/components/task/task-form/task-form.component.ts");
+/* harmony import */ var _task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../task/user-task/user-task.component */ "./src/app/components/task/user-task/user-task.component.ts");
+
+
+
+
 
 
 
@@ -782,43 +810,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PersonalComponent_app_task_1_Template(rf, ctx) { if (rf & 1) {
-    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-task", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("close", function PersonalComponent_app_task_1_Template_app_task_close_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.closeTaskDetail(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "app-task", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("close", function PersonalComponent_app_task_1_Template_app_task_close_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r3.closeTaskDetail(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("task", ctx_r0.task);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("task", ctx_r0.task);
 } }
 function PersonalComponent_app_task_form_2_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-task-form", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("close", function PersonalComponent_app_task_form_2_Template_app_task_form_close_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r6); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r5.closeTaskForm(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "app-task-form", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("close", function PersonalComponent_app_task_form_2_Template_app_task_form_close_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r6); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r5.closeTaskForm(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("changeTask", ctx_r1.task);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("changeTask", ctx_r1.task);
 } }
 function PersonalComponent_app_user_task_11_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-user-task", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("taskIdEmitter", function PersonalComponent_app_user_task_11_Template_app_user_task_taskIdEmitter_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r9); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r8.getTaskById($event); })("updateTaskEmitter", function PersonalComponent_app_user_task_11_Template_app_user_task_updateTaskEmitter_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r9); const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r10.updateTask($event); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "app-user-task", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("taskIdEmitter", function PersonalComponent_app_user_task_11_Template_app_user_task_taskIdEmitter_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r9); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r8.getTaskById($event); })("updateTaskEmitter", function PersonalComponent_app_user_task_11_Template_app_user_task_updateTaskEmitter_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r9); const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r10.updateTask($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const task_r7 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("task", task_r7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("task", task_r7);
 } }
+const _c0 = function (a0) { return { show: a0 }; };
 // Класс личный кабинет.
 class PersonalComponent {
-    constructor(taskManagerService) {
+    constructor(taskManagerService, formBuilder, projectService) {
         this.taskManagerService = taskManagerService;
+        this.formBuilder = formBuilder;
+        this.projectService = projectService;
         // Массив задач пользователя.
         this.userTasks = [];
     }
     // Инициализация компонента.
     ngOnInit() {
+        this.initForm();
         this.showTaskForm = false;
         this.showTaskDetail = false;
+        this.showInput = false;
+        this.project = new _classes_project_model__WEBPACK_IMPORTED_MODULE_0__["ProjectModel"]();
         // Извлечение логина.
         const username = localStorage.getItem('username');
         // Получение задач пользователя по логину.
@@ -828,6 +862,20 @@ class PersonalComponent {
             if (data) {
                 this.userTasks = data;
             }
+        });
+    }
+    // Инициализация формы.
+    initForm() {
+        this.projectFormGroup = this.formBuilder.group({
+            title: [
+                '',
+                [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('[a-zA-Zа-яА-Я0-9_]+'),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(3),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(40),
+                ],
+            ],
         });
     }
     // Метод получает задачу по id.
@@ -851,7 +899,7 @@ class PersonalComponent {
     }
     // Созание задачи.
     createTask() {
-        this.task = new _classes_task_model__WEBPACK_IMPORTED_MODULE_0__["TaskModel"]();
+        this.task = new _classes_task_model__WEBPACK_IMPORTED_MODULE_1__["TaskModel"]();
         this.showTaskForm = true;
     }
     // Закрытие формы задачи.
@@ -864,60 +912,77 @@ class PersonalComponent {
     }
     // Создание проекта.
     createProject() {
-        // Пока не реализовано.
+        this.showInput = !this.showInput;
+    }
+    // Отправка формы проекта.
+    onSubmit() {
+        this.showInput = false;
+        this.project.AuthorLogin = localStorage.getItem('username');
+        this.project.Title = this.projectFormGroup.controls.title.value;
+        this.projectService.addProject(this.project).subscribe((data) => {
+            if (data) {
+                alert("Project created sucessfull");
+            }
+        });
     }
 }
-PersonalComponent.ɵfac = function PersonalComponent_Factory(t) { return new (t || PersonalComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_task_manager_service__WEBPACK_IMPORTED_MODULE_2__["TaskManagerService"])); };
-PersonalComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PersonalComponent, selectors: [["app-personal"]], decls: 19, vars: 3, consts: [[1, "personal-container"], ["class", "task-detail", 3, "task", "close", 4, "ngIf"], ["class", "task-form", 3, "changeTask", "close", 4, "ngIf"], [1, "personal-task"], [1, "title"], [1, "title-text"], [1, "task-control-container"], [1, "task-control", 3, "click"], [1, "task-container"], [3, "task", "taskIdEmitter", "updateTaskEmitter", 4, "ngFor", "ngForOf"], [1, "personal-project"], [1, "task-detail", 3, "task", "close"], [1, "task-form", 3, "changeTask", "close"], [3, "task", "taskIdEmitter", "updateTaskEmitter"]], template: function PersonalComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PersonalComponent_app_task_1_Template, 1, 1, "app-task", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PersonalComponent_app_task_form_2_Template, 1, 1, "app-task-form", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "h3", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "My tasks");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "button", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PersonalComponent_Template_button_click_8_listener() { return ctx.createTask(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Create task");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, PersonalComponent_app_user_task_11_Template, 1, 1, "app-user-task", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "h3", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, "My projects");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "button", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PersonalComponent_Template_button_click_17_listener() { return ctx.createProject(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, " Create project ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+PersonalComponent.ɵfac = function PersonalComponent_Factory(t) { return new (t || PersonalComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_task_manager_service__WEBPACK_IMPORTED_MODULE_4__["TaskManagerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"])); };
+PersonalComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: PersonalComponent, selectors: [["app-personal"]], decls: 21, vars: 7, consts: [[1, "personal-container"], ["class", "task-detail", 3, "task", "close", 4, "ngIf"], ["class", "task-form", 3, "changeTask", "close", 4, "ngIf"], [1, "personal-task"], [1, "title"], [1, "title-text"], [1, "task-control-container"], [1, "task-control", 3, "click"], [1, "task-container"], [3, "task", "taskIdEmitter", "updateTaskEmitter", 4, "ngFor", "ngForOf"], [1, "personal-project"], [1, "project-input-container", 3, "formGroup", "ngClass", "submit"], ["formControlName", "title", "placeholder", "Please enter project name", 1, "project-input"], [1, "task-detail", 3, "task", "close"], [1, "task-form", 3, "changeTask", "close"], [3, "task", "taskIdEmitter", "updateTaskEmitter"]], template: function PersonalComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, PersonalComponent_app_task_1_Template, 1, 1, "app-task", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, PersonalComponent_app_task_form_2_Template, 1, 1, "app-task-form", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "h3", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, "My tasks");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "button", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function PersonalComponent_Template_button_click_8_listener() { return ctx.createTask(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](9, "Create task");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](11, PersonalComponent_app_user_task_11_Template, 1, 1, "app-user-task", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "h3", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](15, "My projects");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "button", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function PersonalComponent_Template_button_click_17_listener() { return ctx.createProject(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](18, " Create project ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "form", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("submit", function PersonalComponent_Template_form_submit_19_listener() { return ctx.onSubmit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](20, "input", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.showTaskDetail);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.showTaskForm);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.userTasks);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _task_task_task_component__WEBPACK_IMPORTED_MODULE_4__["TaskComponent"], _task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_5__["TaskFormComponent"], _task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_6__["UserTaskComponent"]], styles: [".personal-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  width: 100%;\n  height: 100%;\n  background-color: #ebebeb;\n  overflow: hidden;\n}\n\n.task-control-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.personal-task[_ngcontent-%COMP%] {\n  width: 850px;\n  height: 100%;\n  background-color: #d1d1d1;\n}\n\n.personal-project[_ngcontent-%COMP%] {\n  margin-left: 5px;\n  width: 400px;\n  height: 100%;\n  background-color: #d1d1d1;\n}\n\n.task-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n  height: 100%;\n  padding: 10px;\n  overflow-y: auto;\n}\n\n.task-control[_ngcontent-%COMP%] {\n  width: 100px;\n  height: 50px;\n  margin: 5px;\n  background-color: #cecece;\n  border-radius: 5px;\n}\n\n.task-control[_ngcontent-%COMP%]:hover {\n  background-color: #8f8f8f;\n}\n\n.task-form[_ngcontent-%COMP%], .task-detail[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 850px;\n  height: 100%;\n  z-index: 10;\n}\n\n.title[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 40px;\n  margin: 5px;\n  text-align: center;\n}\n\n.title-text[_ngcontent-%COMP%] {\n  font-size: 1.8rem;\n  text-transform: uppercase;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWluL3BlcnNvbmFsL3BlcnNvbmFsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSx5QkFBQTtFQUNBLGdCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxhQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7QUFDRjs7QUFFQTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGdCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBQTtBQUNGOztBQUVBOztFQUVFLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FBQ0Y7O0FBRUE7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtBQUNGOztBQUVBO0VBQ0UsaUJBQUE7RUFDQSx5QkFBQTtBQUNGIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9tYWluL3BlcnNvbmFsL3BlcnNvbmFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnBlcnNvbmFsLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LXdyYXA6IG5vd3JhcDtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ViZWJlYjtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcblxyXG4udGFzay1jb250cm9sLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuLnBlcnNvbmFsLXRhc2sge1xyXG4gIHdpZHRoOiA4NTBweDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2QxZDFkMTtcclxufVxyXG5cclxuLnBlcnNvbmFsLXByb2plY3Qge1xyXG4gIG1hcmdpbi1sZWZ0OiA1cHg7XHJcbiAgd2lkdGg6IDQwMHB4O1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDFkMWQxO1xyXG59XHJcblxyXG4udGFzay1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC13cmFwOiB3cmFwO1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgb3ZlcmZsb3cteTogYXV0bztcclxufVxyXG5cclxuLnRhc2stY29udHJvbCB7XHJcbiAgd2lkdGg6IDEwMHB4O1xyXG4gIGhlaWdodDogNTBweDtcclxuICBtYXJnaW46IDVweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2VjZWNlO1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxufVxyXG5cclxuLnRhc2stY29udHJvbDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzhmOGY4ZjtcclxufVxyXG5cclxuLnRhc2stZm9ybSxcclxuLnRhc2stZGV0YWlsIHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgd2lkdGg6IDg1MHB4O1xyXG4gIGhlaWdodDogMTAwJTtcclxuICB6LWluZGV4OiAxMDtcclxufVxyXG5cclxuLnRpdGxlIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDQwcHg7XHJcbiAgbWFyZ2luOiA1cHg7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4udGl0bGUtdGV4dCB7XHJcbiAgZm9udC1zaXplOiAxLjhyZW07XHJcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxufVxyXG4iXX0= */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PersonalComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.showTaskDetail);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.showTaskForm);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.userTasks);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("formGroup", ctx.projectFormGroup)("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](5, _c0, ctx.showInput));
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroupDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgClass"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlName"], _task_task_task_component__WEBPACK_IMPORTED_MODULE_7__["TaskComponent"], _task_task_form_task_form_component__WEBPACK_IMPORTED_MODULE_8__["TaskFormComponent"], _task_user_task_user_task_component__WEBPACK_IMPORTED_MODULE_9__["UserTaskComponent"]], styles: [".personal-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  width: 100%;\n  height: 100%;\n  background-color: #ebebeb;\n  overflow: hidden;\n}\n\n.task-control-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.personal-task[_ngcontent-%COMP%] {\n  width: 850px;\n  height: 100%;\n  background-color: #d1d1d1;\n}\n\n.personal-project[_ngcontent-%COMP%] {\n  margin-left: 5px;\n  width: 400px;\n  height: 100%;\n  background-color: #d1d1d1;\n}\n\n.task-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n  height: 100%;\n  padding: 10px;\n  overflow-y: auto;\n}\n\n.task-control[_ngcontent-%COMP%] {\n  width: 100px;\n  height: 50px;\n  margin: 5px;\n  background-color: #cecece;\n  border-radius: 5px;\n}\n\n.task-control[_ngcontent-%COMP%]:hover {\n  background-color: #8f8f8f;\n}\n\n.task-form[_ngcontent-%COMP%], .task-detail[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 850px;\n  height: 100%;\n  z-index: 10;\n}\n\n.title[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 40px;\n  margin: 5px;\n  text-align: center;\n}\n\n.title-text[_ngcontent-%COMP%] {\n  font-size: 1.8rem;\n  text-transform: uppercase;\n}\n\n.project-input-container[_ngcontent-%COMP%] {\n  margin: auto auto auto 5px;\n  transition: 0.4s;\n  transform: scaleX(0);\n  transform-origin: left;\n}\n\n.project-input[_ngcontent-%COMP%] {\n  width: 250px;\n  height: 30px;\n  border: 2px solid #272727;\n  border-radius: 10px;\n}\n\n.project-input[_ngcontent-%COMP%]::placeholder {\n  color: #4d4d4d;\n}\n\n.show[_ngcontent-%COMP%] {\n  transform: scaleX(1);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWluL3BlcnNvbmFsL3BlcnNvbmFsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSx5QkFBQTtFQUNBLGdCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxhQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7QUFDRjs7QUFFQTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGdCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBQTtBQUNGOztBQUVBOztFQUVFLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FBQ0Y7O0FBRUE7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtBQUNGOztBQUVBO0VBQ0UsaUJBQUE7RUFDQSx5QkFBQTtBQUNGOztBQUVBO0VBQ0UsMEJBQUE7RUFDQSxnQkFBQTtFQUNBLG9CQUFBO0VBQ0Esc0JBQUE7QUFDRjs7QUFFQTtFQUNFLFlBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7RUFDQSxtQkFBQTtBQUNGOztBQUVBO0VBQ0UsY0FBQTtBQUNGOztBQUVBO0VBQ0Usb0JBQUE7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWFpbi9wZXJzb25hbC9wZXJzb25hbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wZXJzb25hbC1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC13cmFwOiBub3dyYXA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlYmViZWI7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuLnRhc2stY29udHJvbC1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcbi5wZXJzb25hbC10YXNrIHtcclxuICB3aWR0aDogODUwcHg7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNkMWQxZDE7XHJcbn1cclxuXHJcbi5wZXJzb25hbC1wcm9qZWN0IHtcclxuICBtYXJnaW4tbGVmdDogNXB4O1xyXG4gIHdpZHRoOiA0MDBweDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2QxZDFkMTtcclxufVxyXG5cclxuLnRhc2stY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtd3JhcDogd3JhcDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbi50YXNrLWNvbnRyb2wge1xyXG4gIHdpZHRoOiAxMDBweDtcclxuICBoZWlnaHQ6IDUwcHg7XHJcbiAgbWFyZ2luOiA1cHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NlY2VjZTtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbn1cclxuXHJcbi50YXNrLWNvbnRyb2w6aG92ZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICM4ZjhmOGY7XHJcbn1cclxuXHJcbi50YXNrLWZvcm0sXHJcbi50YXNrLWRldGFpbCB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHdpZHRoOiA4NTBweDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgei1pbmRleDogMTA7XHJcbn1cclxuXHJcbi50aXRsZSB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiA0MHB4O1xyXG4gIG1hcmdpbjogNXB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnRpdGxlLXRleHQge1xyXG4gIGZvbnQtc2l6ZTogMS44cmVtO1xyXG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbn1cclxuXHJcbi5wcm9qZWN0LWlucHV0LWNvbnRhaW5lciB7XHJcbiAgbWFyZ2luOiBhdXRvIGF1dG8gYXV0byA1cHg7XHJcbiAgdHJhbnNpdGlvbjogMC40cztcclxuICB0cmFuc2Zvcm06IHNjYWxlWCgwKTtcclxuICB0cmFuc2Zvcm0tb3JpZ2luOiBsZWZ0O1xyXG59XHJcblxyXG4ucHJvamVjdC1pbnB1dCB7XHJcbiAgd2lkdGg6IDI1MHB4O1xyXG4gIGhlaWdodDogMzBweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCAjMjcyNzI3O1xyXG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbn1cclxuXHJcbi5wcm9qZWN0LWlucHV0OjpwbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6ICM0ZDRkNGQ7XHJcbn1cclxuXHJcbi5zaG93IHtcclxuICB0cmFuc2Zvcm06IHNjYWxlWCgxKTtcclxufVxyXG4iXX0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](PersonalComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
         args: [{
                 selector: 'app-personal',
                 templateUrl: './personal.component.html',
                 styleUrls: ['./personal.component.scss'],
             }]
-    }], function () { return [{ type: _services_task_manager_service__WEBPACK_IMPORTED_MODULE_2__["TaskManagerService"] }]; }, null); })();
+    }], function () { return [{ type: _services_task_manager_service__WEBPACK_IMPORTED_MODULE_4__["TaskManagerService"] }, { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }, { type: _services_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"] }]; }, null); })();
 
 
 /***/ }),
@@ -1846,6 +1911,52 @@ UserTaskComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefine
 
 /***/ }),
 
+/***/ "./src/app/components/user-project/user-project.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/user-project/user-project.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: UserProjectComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserProjectComponent", function() { return UserProjectComponent; });
+/* harmony import */ var _classes_project_model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../classes/project.model */ "./src/app/classes/project.model.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+
+// Компонент проект для вывода в кабинет пользователя.
+class UserProjectComponent {
+    constructor() { }
+    ngOnInit() {
+        if (!this.project) {
+            this.project = new _classes_project_model__WEBPACK_IMPORTED_MODULE_0__["ProjectModel"]();
+        }
+    }
+}
+UserProjectComponent.ɵfac = function UserProjectComponent_Factory(t) { return new (t || UserProjectComponent)(); };
+UserProjectComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: UserProjectComponent, selectors: [["app-user-project"]], inputs: { project: "project" }, decls: 4, vars: 0, consts: [[1, "project-container"], [1, "project-title"], [1, "project-date"], [1, "project-button"]], template: function UserProjectComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "p", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "button", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXNlci1wcm9qZWN0L3VzZXItcHJvamVjdC5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](UserProjectComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-user-project',
+                templateUrl: './user-project.component.html',
+                styleUrls: ['./user-project.component.scss']
+            }]
+    }], function () { return []; }, { project: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }] }); })();
+
+
+/***/ }),
+
 /***/ "./src/app/enums/priority.enum.ts":
 /*!****************************************!*\
   !*** ./src/app/enums/priority.enum.ts ***!
@@ -1894,6 +2005,72 @@ EnumToArrayPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineP
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
         args: [{ name: 'enumToArray' }]
     }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/services/project.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/project.service.ts ***!
+  \*********************************************/
+/*! exports provided: ProjectService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectService", function() { return ProjectService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+// Сервис управления задачами
+class ProjectService {
+    constructor(http) {
+        this.http = http;
+        this.rootUrl = "https://localhost:44376";
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]()
+        };
+    }
+    // Запрос на добавление проекта.
+    addProject(projectModel) {
+        const route = '/project/addproject';
+        const body = projectModel;
+        this.httpOptions.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        return this.http.post(`${this.rootUrl}${route}`, body, this.httpOptions);
+    }
+    // Запрос на получение всех проектов.
+    getAllProjects() {
+        const route = '/project/getallprojects';
+        this.httpOptions.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        return this.http.get(`${this.rootUrl}${route}`, this.httpOptions);
+    }
+    // Запрос на получение проектов пользователя.
+    getAccountProjects(userName) {
+        const route = '/project/getaccountprojects';
+        this.httpOptions.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        return this.http.get(`${this.rootUrl}${route}?username=${userName}`, this.httpOptions);
+    }
+    addTaskToProject(taskId, projectId) {
+        const route = '/project/addproject';
+        const body = {
+            TaskId: taskId,
+            ProjectId: projectId
+        };
+        this.httpOptions.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        return this.http.put(`${this.rootUrl}${route}`, body, this.httpOptions);
+    }
+}
+ProjectService.ɵfac = function ProjectService_Factory(t) { return new (t || ProjectService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+ProjectService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ProjectService, factory: ProjectService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ProjectService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),

@@ -1710,6 +1710,7 @@ class TaskFormComponent {
     // Отправка задачи на сервер.
     onSubmit() {
         const controls = this.taskFormGroup.controls;
+        this.task.TaskId = this.changeTask.TaskId;
         this.task.AuthorId = localStorage.getItem('username');
         this.task.Title = controls.title.value;
         this.task.Description = controls.description.value;

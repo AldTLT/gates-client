@@ -1,0 +1,17 @@
+$wrapper-width: 100%;
+$min-width: 800px;
+
+* {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $wrapper-width;
+  min-width: $min-width;
+  overflow: hidden;
+}

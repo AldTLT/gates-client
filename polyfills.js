@@ -3033,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\GitHub\_NET-project\frontend-tracking-system\Gates\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! C:\Users\PG01\Documents\Yury\git\_NET-project\frontend\frontend-tracking-system\Gates\src\polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

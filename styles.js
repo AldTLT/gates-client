@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\PG01\Documents\Yury\git\_NET-project\frontend\frontend-tracking-system\Gates\node_modules\@angular\material\prebuilt-themes\purple-green.css */"./node_modules/@angular/material/prebuilt-themes/purple-green.css");
-module.exports = __webpack_require__(/*! C:\Users\PG01\Documents\Yury\git\_NET-project\frontend\frontend-tracking-system\Gates\src\styles.scss */"./src/styles.scss");
+__webpack_require__(/*! D:\GitHub\_NET-project\frontend-tracking-system\Gates\node_modules\@angular\material\prebuilt-themes\purple-green.css */"./node_modules/@angular/material/prebuilt-themes/purple-green.css");
+module.exports = __webpack_require__(/*! D:\GitHub\_NET-project\frontend-tracking-system\Gates\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })
